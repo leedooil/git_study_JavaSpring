@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframwork.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- bean 태그를 이용해 PersonServiceImpl 객체를 생성한 후 빈 id를 personService로 지정 -->
+	<bean id="personService" class="com.spring.ex01.PersonServiceImpl">
+		<!-- setter를 이용해 값 주입할 때 사용 -->
+		<!-- PersonServiceImpl객체 속성 name 값을 value태그를 이용해 '홍길동'으로 초기화 -->
+		<property name="name" value="홍길동">
+			<!-- <value>홍길동</value> -->
+		</property>
+	</bean>
+	<!-- value인 이순신을 전달하여 속성 name 초기화 -->
+	<bean id="personService1" class="com.spring.ex02.PersonServiceImpl">
+		<!-- 생성자를 이용해 값 주입할 때 사용 -->
+		<constructor-arg value="이순신"></constructor-arg>
+	</bean>
+
+	<bean id="personService2" class="com.spring.ex02.PersonServiceImpl">
+		<constructor-arg value="손흥민"></constructor-arg>
+		<constructor-arg value="32"></constructor-arg>
+	</bean>
+</beans>

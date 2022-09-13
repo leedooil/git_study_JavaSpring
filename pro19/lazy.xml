@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframwork.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- lazy-init 설정 안하거나 false 설정시 톰캣 실행시 빈 자동생성. 즉 호출 안해도 알아서 출력됨 -->
+	<bean id="firstBean" class="com.spring.ex04.First" lazy-init="false"></bean>	
+	<!-- lazy-init 'true' 설정시 해당 빈 사용시 빈이 생성. 즉 호출해야함 사용가능 -->
+	<bean id="secondBean" class="com.spring.ex04.Second" lazy-init="true"></bean>	
+	<bean id="thirdBean" class="com.spring.ex04.Third" lazy-init="default"></bean>	
+</beans>
